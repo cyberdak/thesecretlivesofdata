@@ -47,7 +47,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, function () {
             frame.snapshot();
             node("b")._state = "follower";
-            model().subtitle = '<h2>The <em>Follower - 跟随者</em> state,</h2>'
+            model().subtitle = '<h2><em>Follower - 跟随者</em> 状态,</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -55,7 +55,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, function () {
             frame.snapshot();
             node("b")._state = "candidate";
-            model().subtitle = '<h2>the <em>Candidate - 候选人</em> state,</h2>'
+            model().subtitle = '<h2><em>Candidate - 候选人</em> 状态（在图上以虚线表示）,</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -63,7 +63,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, function () {
             frame.snapshot();
             node("b")._state = "leader";
-            model().subtitle = '<h2>or the <em>Leader - 领导</em> state.</h2>'
+            model().subtitle = '<h2>或者 <em>Leader - 领导</em> 状态 （在图上以黑色实线圈表示）.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -73,14 +73,14 @@ define(["../model/log_entry"], function (LogEntry) {
             frame.snapshot();
             model().zoom(null);
             node("b")._state = "follower";
-            model().subtitle = '<h2>所有节点默认都是Follewer状态.</h2>'
+            model().subtitle = '<h2>所有节点默认都是 Follewer 状态.</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>如果Follower没有收到来自Leader的消息，那么它就成为候选人。</h2>'
+            model().subtitle = '<h2>如果 Follower 没有收到来自 Leader 的消息，那么它就成为候选人。</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -103,7 +103,7 @@ define(["../model/log_entry"], function (LogEntry) {
         .after(100, wait).indefinite()
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>其他节点会回复他们的投票情况。/</h2>'
+            model().subtitle = '<h2>其他节点会回复他们的投票情况。</h2>'
                            + model().controls.html();
             layout.invalidate();
         })
@@ -137,7 +137,7 @@ define(["../model/log_entry"], function (LogEntry) {
 
         .after(100, function () {
             frame.snapshot();
-            model().subtitle = '<h2>系统的所有变更都需要经过leader来决定。</h2>'
+            model().subtitle = '<h2>系统的所有变更都需要经过 leader 来决定。</h2>'
                            + model().controls.html();
             layout.invalidate();
         })

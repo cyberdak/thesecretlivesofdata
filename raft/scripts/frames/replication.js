@@ -24,7 +24,7 @@ define([], function () {
             layout.invalidate();
         })
         .after(500, function () {
-            frame.model().title = '<h2 style="visibility:visible">Log Replication - 日志复写</h1>'
+            frame.model().title = '<h2 style="visibility:visible">Log Replication - 日志复制</h1>'
                                 + '<br/>' + frame.model().controls.html();
             layout.invalidate();
         })
